@@ -1,7 +1,11 @@
 # Entrega – arquivo da avaliação.
 
-## Aluno:
-## RA:
+## Aluno: Márcio Augusto Garcia Soares
+## RA: 24000138
 
 ## Observações (Opcional)
-Use este espaço caso queira explicar alguma decisão, dúvida ou comentário adicional.
+
+Utilizando o atalho CTRL+ALT+P exportei todos os arquivos .puml para .png na pasta out/docs/puml
+Ficando assim com o mesmo título definido em @startuml dos arquivos.
+
+![alt text](image.png)
