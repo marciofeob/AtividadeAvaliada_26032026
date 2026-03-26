@@ -1,0 +1,12 @@
+@startuml uc04_cadastrar_cliente
+start
+:Clicar no botão "Novo Cliente";
+:Pedir CPF, Nome e Telefone;
+if (Cliente já tem cadastro?) then (sim)
+  :Avisar "CPF já existe" e puxar ficha antiga (FA01);
+else (não)
+  :Validar CPF e salvar no banco de dados;
+endif
+:Retornar para a tela da venda;
+stop
+@enduml

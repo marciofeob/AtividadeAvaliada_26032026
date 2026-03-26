@@ -1,0 +1,17 @@
+@startuml uc01_realizar_venda
+start
+:Iniciar nova venda;
+:Bipar ou Buscar produtos;
+:Informar forma de pagamento;
+if (Pagamento a prazo?) then (sim)
+  :Exigir cadastro e lançar no financeiro (FA01);
+else (não)
+endif
+if (Remédio controlado?) then (sim)
+  :Travar e pedir senha do farmacêutico (FA02);
+else (não)
+endif
+:Finalizar venda;
+:Imprimir cupom;
+stop
+@enduml

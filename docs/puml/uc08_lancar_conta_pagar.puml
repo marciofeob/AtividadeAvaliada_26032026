@@ -1,0 +1,11 @@
+@startuml uc08_lancar_conta_pagar
+start
+:Puxar valor total da nota fiscal recém-salva;
+:Ler data de vencimento combinada com fornecedor;
+if (Compra foi paga no ato da entrega?) then (sim)
+  :Criar a conta com o status "Paga" (FA01);
+else (não)
+  :Criar a conta com o status "Aberta";
+endif
+stop
+@enduml

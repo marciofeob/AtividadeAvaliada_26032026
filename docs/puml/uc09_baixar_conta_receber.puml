@@ -1,0 +1,13 @@
+@startuml uc09_baixar_conta_receber
+start
+:Acessar tela de Contas a Receber;
+:Digitar CPF ou nome do cliente;
+:Selecionar a dívida pendente;
+if (Cliente pagou só uma parte?) then (sim)
+  :Abater valor pago e manter a conta "Aberta" com saldo restante (FA01);
+else (não)
+  :Clicar em "Receber Pagamento";
+  :Alterar status da conta para "Recebida";
+endif
+stop
+@enduml

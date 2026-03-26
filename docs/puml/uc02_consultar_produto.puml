@@ -1,0 +1,11 @@
+@startuml uc02_consultar_produto
+start
+:Digitar nome ou bipar código de barras;
+:Buscar no banco de dados;
+if (Produto encontrado?) then (sim)
+  :Mostrar preço e descrição na tela;
+else (não)
+  :Exibir mensagem "Produto não encontrado" (FA01);
+endif
+stop
+@enduml

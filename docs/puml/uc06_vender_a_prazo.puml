@@ -1,0 +1,14 @@
+@startuml uc06_vender_a_prazo
+start
+:Selecionar a opção "A Prazo";
+:Verificar se cliente tem limite de crédito aprovado;
+if (Limite aprovado?) then (sim)
+  :Enviar o valor para Contas a Receber;
+  :Finalizar venda;
+  :Cliente assina a via do cupom;
+else (não)
+  :Mostrar "Crédito Negado";
+  :Obrigar nova forma de pagamento (FA01);
+endif
+stop
+@enduml

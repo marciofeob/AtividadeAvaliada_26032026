@@ -1,0 +1,11 @@
+@startuml uc03_verificar_estoque
+start
+:Ler quantidade solicitada pelo cliente;
+:Comparar com saldo salvo no banco de dados;
+if (Saldo é suficiente?) then (sim)
+  :Aprovar e liberar o item na tela;
+else (não)
+  :Bloquear ação e avisar "Estoque Insuficiente" (FA01);
+endif
+stop
+@enduml

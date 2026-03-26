@@ -1,0 +1,12 @@
+@startuml uc07_registrar_compra
+start
+:Digitar chave de acesso da Nota Fiscal;
+:Conferir quantidades dos produtos na tela;
+if (Caixa amassada / Faltou item?) then (sim)
+  :Gerente muda a quantidade no sistema antes de salvar (FA01);
+else (não)
+endif
+:Somar os itens ao saldo do estoque físico;
+:Enviar cobrança do fornecedor para o financeiro;
+stop
+@enduml

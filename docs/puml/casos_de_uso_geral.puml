@@ -1,0 +1,39 @@
+@startuml casos_de_uso_geral
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Atendente" as Atendente
+actor "Farmacêutico" as Farmaceutico
+actor "Gerente" as Gerente
+actor "Financeiro" as Financeiro
+
+rectangle "Sistema de Gestão de Farmácia" {
+    usecase "UC01: Realizar Venda" as UC01
+    usecase "UC02: Consultar Produto" as UC02
+    usecase "UC03: Verificar Estoque" as UC03
+    usecase "UC04: Cadastrar Cliente" as UC04
+    usecase "UC05: Validar Receita" as UC05
+    usecase "UC06: Vender a Prazo" as UC06
+    usecase "UC07: Registrar Compra de Fornecedor" as UC07
+    usecase "UC08: Lançar Conta a Pagar" as UC08
+    usecase "UC09: Baixar Conta a Receber" as UC09
+    usecase "UC10: Baixar Conta a Pagar" as UC10
+}
+
+Atendente --> UC01
+Atendente --> UC02
+Atendente --> UC04
+Farmaceutico --> UC05
+Gerente --> UC07
+Gerente --> UC02
+Financeiro --> UC09
+Financeiro --> UC10
+
+UC01 ..> UC02 : <<include>>
+UC01 ..> UC03 : <<include>>
+UC07 ..> UC08 : <<include>>
+
+UC04 ..> UC01 : <<extend>>
+UC05 ..> UC01 : <<extend>>
+UC06 ..> UC01 : <<extend>>
+@enduml

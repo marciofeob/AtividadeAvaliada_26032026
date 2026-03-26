@@ -1,0 +1,12 @@
+@startuml uc05_validar_receita
+start
+:Pausar a venda no sistema;
+:Farmacêutico analisa o papel da receita;
+if (Receita está válida?) then (sim)
+  :Farmacêutico digita a senha no sistema;
+  :Destravar a venda;
+else (não)
+  :Recusar receita e cancelar o item da venda (FA01);
+endif
+stop
+@enduml

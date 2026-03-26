@@ -157,5 +157,3 @@ Os alunos deverão:
 - Casos de uso: minimo 10, sendo obrigatória a utilização de 3 includes e 3 extends. Demonstrar por meio de diagrama de casos de uso.
 - Documentação de cada caso de uso (conforme template).
 - Diagramas de atividade para cada caso de uso.
-
-

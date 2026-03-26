@@ -1,0 +1,13 @@
+@startuml uc10_baixar_conta_pagar
+start
+:Acessar tela de Contas a Pagar;
+:Filtrar as contas pelo dia do vencimento;
+:Selecionar a conta paga no banco;
+if (Boleto atrasou e cobrou juros?) then (sim)
+  :Digitar o valor novo com a multa antes de dar a baixa (FA01);
+else (não)
+endif
+:Clicar em "Dar Baixa";
+:Alterar o status da conta para "Paga";
+stop
+@enduml
